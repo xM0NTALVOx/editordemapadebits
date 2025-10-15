@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>🎨 Editor de mapa de Bits</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>🎨 Editor de mapa de Bits</h2>
+    <input type="file" id="fileInput" accept="image/*">
+
+    <h3>Filtros rápidos</h3>
+    <div class="tool-group">
+      <button id="btnGray">Grises</button>
+      <button id="btnInvert">Invertir</button>
+      <button id="btnBlur">Desenfocar</button>
+      <button id="btnPixel">Pixelar</button>
+      <button id="btnSepia">Sepia</button>
+      <button id="btnReset">Restablecer</button>
+    </div>
+
+    <h3>Brillo / Contraste</h3>
+    <label>Brillo <span id="bVal">0</span></label>
+    <input type="range" id="brightness" min="-100" max="100" value="0">
+    <label>Contraste <span id="cVal">0</span></label>
+    <input type="range" id="contrast" min="-100" max="100" value="0">
+    <button id="btnApplyBC">Aplicar</button>
+
+    <h3>Dibujo</h3>
+    <div class="color-palette" id="palette"></div>
+    <input type="range" id="brushSize" min="1" max="30" value="5">
+    <label>Tamaño del pincel: <span id="brushVal">5</span>px</label>
+    <button id="btnDraw">Modo Dibujo</button>
+    <button id="btnErase">Borrador</button>
+
+    <h3>Tinte de color</h3>
+    <div class="tint-palette" id="tintPalette"></div>
+    <button id="btnTint">Aplicar tinte</button>
+
+    <h3>Archivo</h3>
+    <button id="btnReset">Restablecer</button>
+    <button id="btnDownload">Descargar</button>
+  </div>
+
+  <div class="workspace">
+    <canvas id="canvas" width="800" height="600"></canvas>
+  </div>
+
+  <script src="editor.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
